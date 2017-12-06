@@ -3,27 +3,38 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="angular.js"></script>
+  <link rel="stylesheet" href="style.css" />
   <title>Bytematics</title>
 </head>
-<body ng-controller="control">
+<body ng-controller="control" style="background:{{color}}">
   <center>
+
     <div class="container well ">
       <h1>Welcome to the HomePage</h1>
     </div>
+
     <button type="button" class="btn btn-primary btn-lg" ng-click="click()">Click Me !</button>
-    <div ng-show="show" class="container well">
-      <input type="number" ng-model='i' />
-      <br /><br />
-      <input type="number" ng-model='j' />
-      <br /><br />
-      <button type="button" class="btn btn-primary btn-lg" ng-click="click()">OK</button>
-    </div>
-    <div ng-hide="show">
-      {{i+j}}
+    <br /><br />
+
+    <div ng-hide="show" >
+      <h1 >{{i+j}}</h1>
     </div>
   </center>
+  <div ng-show="show" class="container well pop_up">
+    <button type="button" ng-click="click()" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+      <center>
+        <h2>Enter value</h2>
+        <input type="number" ng-model='i' />
+        <br /><br />
+        <input type="number" ng-model='j' />
+        <br /><br />
+        <button type="button" class="btn btn-primary btn-lg" ng-click="click()">OK</button>
+      </center>
+  </div>
+
 </body>
 </html>

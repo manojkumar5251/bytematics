@@ -1,0 +1,8 @@
+.pop_up {
+  position: fixed;
+  width: 500px;
+  border-radius: 10px;
+  top: 100px;
+  right: 400px;
+  left: 400px;
+}
