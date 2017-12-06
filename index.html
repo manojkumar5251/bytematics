@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="angular.js"></script>
+  <title>Bytematics</title>
+</head>
+<body ng-controller="control">
+  <center>
+    <div class="container well ">
+      <h1>Welcome to the HomePage</h1>
+    </div>
+    <button type="button" class="btn btn-primary btn-lg" ng-click="click()">Click Me !</button>
+    <div ng-show="show" class="container well">
+      <input type="number" ng-model='i' />
+      <br /><br />
+      <input type="number" ng-model='j' />
+      <br /><br />
+      <button type="button" class="btn btn-primary btn-lg" ng-click="click()">OK</button>
+    </div>
+    <div ng-hide="show">
+      {{i+j}}
+    </div>
+  </center>
+</body>
+</html>
