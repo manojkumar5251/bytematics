@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="style.css" />
   <title>Bytematics</title>
 </head>
-<body ng-controller="control" style="background:{{color}}">
-  <center>
+<body ng-controller="control" >
+  <center style="filter:{{background}};">
 
     <div class="container well ">
       <h1>Welcome to the HomePage</h1>
@@ -21,19 +21,23 @@
     <div ng-hide="show" >
       <h1 >{{i+j}}</h1>
     </div>
+
   </center>
   <div ng-show="show" class="container well pop_up">
+
     <button type="button" ng-click="click()" class="close" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
-      <center>
-        <h2>Enter value</h2>
-        <input type="number" ng-model='i' />
-        <br /><br />
-        <input type="number" ng-model='j' />
-        <br /><br />
-        <button type="button" class="btn btn-primary btn-lg" ng-click="click()">OK</button>
-      </center>
+
+    <center>
+      <h2>Enter value</h2>
+      <input type="number" ng-model='i' />
+      <br /><br />
+      <input type="number" ng-model='j' />
+      <br /><br />
+      <button type="button" class="btn btn-primary btn-lg" ng-click="click()">OK</button>
+    </center>
+
   </div>
 
 </body>
